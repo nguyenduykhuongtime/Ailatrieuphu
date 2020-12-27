@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="data"
+            type="com.khuong.ailatrieuphu.model.Question" />
+    </data>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/bg_ch10">
+
+        <TextView
+
+            android:id="@id/textTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/bg_ring"
+            android:gravity="center"
+            android:padding="15.0dip"
+            android:scaleX="1.5"
+            android:text="30"
+            android:textColor="@color/white"
+            android:textSize="30.0dip"
+            android:textStyle="bold"
+            android:typeface="monospace" />
+
+        <TextView
+            android:id="@id/textQuestion"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/help"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginTop="30.0dip"
+            android:layout_marginRight="5.0dip"
+            android:background="@drawable/bg_content_question"
+            android:gravity="center"
+            android:text="Chỗ này hiện câu hỏi nhé"
+            setText="@{data.question}"
+            android:minHeight="165.0dip"
+            android:textColor="@color/white"
+            android:textSize="20.0dip"
+            android:textStyle="bold" />
+
+        <TableRow
+            android:id="@id/titleQuestion"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/textQuestion"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="-52.0dip">
+
+            <LinearLayout
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:id="@id/textTitleQuestion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/icon_title_qestion"
+                    android:gravity="center"
+                    android:text="Câu 1"
+                    android:textSize="20.0dip"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@id/textMoney"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/icon_title_qestion"
+                    android:gravity="center"
+                    android:text="0.000.000"
+                    android:textSize="20.0dip"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </TableRow>
+
+        <ImageView
+            android:id="@id/iconALTP"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_alignTop="@id/help"
+            android:layout_centerInParent="true"
+            android:alpha="0.08"
+            android:src="@drawable/logo_alt" />
+
+        <TableRow
+            android:id="@id/help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="120dp">
+
+            <ImageButton
+                android:id="@id/btnTerminate"
+                android:layout_width="48.0dip"
+                android:layout_height="48.0dip"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/terminate" />
+
+            <ImageButton
+                android:id="@id/btnRestart"
+                android:layout_width="48.0dip"
+                android:layout_height="48.0dip"
+                android:layout_marginLeft="16.0dip"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/restart" />
+
+            <ImageButton
+                android:id="@id/btnPercent50"
+                android:layout_width="48.0dip"
+                android:layout_height="48.0dip"
+                android:layout_marginLeft="16.0dip"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/percent50" />
+
+            <ImageButton
+                android:id="@id/btnHelp"
+                android:layout_width="48.0dip"
+                android:layout_height="48.0dip"
+                android:layout_marginLeft="16.0dip"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/hepl" />
+
+            <ImageButton
+                android:id="@id/btnCall"
+                android:layout_width="48.0dip"
+                android:layout_height="48.0dip"
+                android:layout_marginLeft="16.0dip"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/call" />
+        </TableRow>
+
+        <TextView
+            android:id="@id/textAnsA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textQuestion"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30.0dip"
+            android:background="@drawable/bg_nomal"
+            android:gravity="center"
+            android:text="A"
+            setText="@{data.caseA}"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sizeAns" />
+
+        <TextView
+            android:id="@id/textAnsB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textAnsA"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10.0dip"
+            android:background="@drawable/bg_nomal"
+            android:gravity="center"
+            android:text="B"
+            setText="@{data.caseB}"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sizeAns" />
+
+        <TextView
+            android:id="@id/textAnsC"
+            android:layout_width="wrap_content"
+            android:layout_height="55.0dip"
+            android:layout_below="@id/textAnsB"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10.0dip"
+            android:background="@drawable/bg_nomal"
+            android:gravity="center"
+            android:text="C"
+            setText="@{data.caseC}"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sizeAns" />
+
+        <TextView
+            android:id="@id/textAnsD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textAnsC"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10.0dip"
+            android:background="@drawable/bg_nomal"
+            android:gravity="center"
+            android:text="D"
+            setText="@{data.caseD}"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sizeAns" />
+    </RelativeLayout>
+</layout>

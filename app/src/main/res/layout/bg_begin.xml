@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_ch12"
+        android:gravity="center_vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@id/iconALTP"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/logo_alt" />
+
+        <ImageView
+            android:id="@id/circle"
+            android:layout_width="400.0dip"
+            android:layout_height="400.0dip"
+            android:layout_centerInParent="true"
+            android:src="@drawable/atp__bg_circle_anim" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_height="200dp"
+            android:layout_below="@id/circle"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@id/btnPlay"
+                android:layout_width="380dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="30dp"
+                android:layout_below="@id/circle"
+                android:background="@drawable/bg_hight_score"
+                android:layout_gravity="center_horizontal"
+                android:text="Chơi Ngay"
+                android:textColor="@android:color/white"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@id/btnHightSore"
+                android:layout_width="380dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/bg_hight_score"
+                android:text="Điểm Cao"
+                android:layout_marginBottom="5dp"
+
+                android:textColor="@android:color/white"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>
